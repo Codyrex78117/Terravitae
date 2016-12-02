@@ -1,11 +1,21 @@
 package com.codyrex.terravitae.server.plant;
 
-import net.minecraft.block.Block;
+import com.codyrex.terravitae.server.block.plant.PlantBlock;
 import net.minecraftforge.common.BiomeDictionary;
 
 public interface Plant {
-    Block getBlock();
+    /**
+     * @return the block for this plant.
+     */
+    PlantBlock getBlock();
+
+    /**
+     * @return the biome types this plant can spawn in.
+     */
     BiomeDictionary.Type[] getSpawnBiomeTypes();
-    PlantSpawner getSpawner();
-    int getSpawnChance();
+
+    /**
+     * @return the spawn chance. (Percentage)
+     */
+    double getSpawnChance();
 }

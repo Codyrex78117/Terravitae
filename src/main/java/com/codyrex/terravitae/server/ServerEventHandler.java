@@ -24,15 +24,19 @@ public class ServerEventHandler {
 
         List<Plant> plants = PlantHandler.getPlantsToSpawn(biome);
         if (plants != null) {
-            for (Plant plant : plants) {
-                if (rand.nextInt(plant.getSpawnChance()) == 0) {
-                    PlantSpawner spawner = PlantHandler.getSpawner(plant);
-                    BlockPos surface = world.getTopSolidOrLiquidBlock(pos);
-                    IBlockState ground = world.getBlockState(surface.down());
-                    IBlockState state = world.getBlockState(surface);
-                    IBlockState above = world.getBlockState(surface.up());
-                    if (spawner.canSpawn(ground, state, above)) {
-                        spawner.spawn(world, surface, plant.getBlock());
+            int spawns = rand.nextInt(10) + 15;
+            for (int i = 0; i < spawns; i++) {
+                BlockPos spawnPos = pos.add(rand.nextInt(16), 0, rand.nextInt(16));
+                for (Plant plant : plants) {
+                    if (rand.nextDouble() * 100.0 <= plant.getSpawnChance()) {
+                        PlantSpawner spawner = PlantHandler.getSpawner(plant);
+                        BlockPos surface = world.getTopSolidOrLiquidBlock(spawnPos);
+                        IBlockState ground = world.getBlockState(surface.down());
+                        IBlockState state = world.getBlockState(surface);
+                        IBlockState above = world.getBlockState(surface.up());
+                        if (spawner.canSpawn(ground, state, above)) {
+                            spawner.spawn(world, surface, plant.getBlock());
+                        }
                     }
                 }
             }

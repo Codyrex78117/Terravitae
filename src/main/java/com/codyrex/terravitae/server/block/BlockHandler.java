@@ -2,6 +2,9 @@ package com.codyrex.terravitae.server.block;
 
 import com.codyrex.terravitae.Terravitae;
 import com.codyrex.terravitae.server.api.BlockEntity;
+import com.codyrex.terravitae.server.block.plant.DoublePlantBlock;
+import com.codyrex.terravitae.server.block.plant.PlantBlock;
+import com.codyrex.terravitae.server.plant.PlantSpawner;
 import net.minecraft.block.Block;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.util.ResourceLocation;
@@ -13,6 +16,13 @@ import java.util.List;
 
 public class BlockHandler {
     public static final List<Block> BLOCKS = new ArrayList<>();
+
+    public static final PlantBlock SAND_RYEGRASS = new PlantBlock("sand_ryegrass")
+            .withSpawner(PlantSpawner.SINGLE_BEACH)
+            .withBounds(PlantBlock.BUSH);
+    public static final DoublePlantBlock GARDEN_ANGELICA = new DoublePlantBlock("garden_angelica")
+            .withSpawner(PlantSpawner.DOUBLE_GROUND)
+            .withBounds(PlantBlock.DOUBLE);
 
     public static void register() {
         try {

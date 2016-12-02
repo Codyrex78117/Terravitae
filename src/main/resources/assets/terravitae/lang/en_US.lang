@@ -1,3 +1,8 @@
 # Items
 
 # Blocks
+tile.sand_ryegrass.name=Sand Ryegrass
+tile.garden_angelica.name=Garden Angelica
+
+# Tabs
+itemGroup.terravitae.plants=Terravitae Plants

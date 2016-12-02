@@ -13,6 +13,12 @@ public class PlantHandler {
     private static final Map<Plant, PlantSpawner> SPAWNERS = new HashMap<>();
     private static final Map<Biome, List<Plant>> BIOME_PLANTS = new HashMap<>();
 
+    public static final SandRyegrassPlant SAND_RYEGRASS = new SandRyegrassPlant();
+    public static final GardenAngelicaPlant GARDEN_ANGELICA = new GardenAngelicaPlant();
+
+    /**
+     * Registers all plants that are a static field on this class.
+     */
     public static void register() {
         try {
             for (Field field : PlantHandler.class.getDeclaredFields()) {
@@ -26,8 +32,12 @@ public class PlantHandler {
         }
     }
 
+    /**
+     * Registers the given plant.
+     * @param plant the plant to register
+     */
     public static void registerPlant(Plant plant) {
-        SPAWNERS.put(plant, plant.getSpawner());
+        SPAWNERS.put(plant, plant.getBlock().getSpawner());
         BiomeDictionary.Type[] types = plant.getSpawnBiomeTypes();
         for (BiomeDictionary.Type type : types) {
             Biome[] biomes = BiomeDictionary.getBiomesForType(type);
@@ -44,10 +54,18 @@ public class PlantHandler {
         }
     }
 
+    /**
+     * Gets a list of plants that can spawn in the given biome
+     * @param biome the biome to find plants for
+     */
     public static List<Plant> getPlantsToSpawn(Biome biome) {
         return BIOME_PLANTS.get(biome);
     }
 
+    /**
+     * Gets a PlantSpawner for the given plant
+     * @param plant the plant to get for
+     */
     public static PlantSpawner getSpawner(Plant plant) {
         return SPAWNERS.get(plant);
     }
