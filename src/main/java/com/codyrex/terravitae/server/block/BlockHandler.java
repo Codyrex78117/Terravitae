@@ -23,6 +23,9 @@ public class BlockHandler {
     public static final DoublePlantBlock GARDEN_ANGELICA = new DoublePlantBlock("garden_angelica")
             .withSpawner(PlantSpawner.DOUBLE_GROUND)
             .withBounds(PlantBlock.DOUBLE);
+    public static final DoublePlantBlock UGANDAGRASS = new DoublePlantBlock("ugandagrass")
+            .withSpawner(PlantSpawner.DOUBLE_GROUND)
+            .withBounds(PlantBlock.DOUBLE);
 
     public static void register() {
         try {
