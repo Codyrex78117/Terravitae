@@ -11,8 +11,11 @@ import net.minecraft.block.properties.IProperty;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.client.renderer.block.statemap.StateMap;
+import net.minecraft.entity.Entity;
 import net.minecraft.item.Item;
 import net.minecraftforge.client.model.ModelLoader;
+import net.minecraftforge.fml.client.registry.IRenderFactory;
+import net.minecraftforge.fml.client.registry.RenderingRegistry;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
@@ -69,5 +72,9 @@ public class RenderingHandler {
 
     public void registerBlockRenderer(Block block, final String path, final String type) {
         this.registerBlockRenderer(block, 0, path, type);
+    }
+
+    public <T extends Entity> void registerEntityRenderer(Class<T> entity, IRenderFactory<T> factory) {
+        RenderingRegistry.registerEntityRenderingHandler(entity, factory);
     }
 }
