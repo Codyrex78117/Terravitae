@@ -7,7 +7,7 @@ import net.minecraftforge.common.BiomeDictionary;
 /**
  * Created by Codyr on 03/12/2016.
  */
-public class UgandagrassPlant {
+public class UgandagrassPlant implements Plant {
     @Override
     public PlantBlock getBlock() {
         return BlockHandler.UGANDAGRASS;
