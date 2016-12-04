@@ -20,6 +20,6 @@ public class UgandagrassPlant implements Plant {
 
     @Override
     public double getSpawnChance() {
-        return 1.5;
+        return 40;
     }
 }

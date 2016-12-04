@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "half=lower": {
+      "model": "terravitae:ugandagrass_bottom"
+    },
+    "half=upper": {
+      "model": "terravitae:ugandagrass_top"
+    }
+  }
+}

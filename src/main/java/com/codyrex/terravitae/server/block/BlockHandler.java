@@ -26,6 +26,12 @@ public class BlockHandler {
     public static final DoublePlantBlock UGANDAGRASS = new DoublePlantBlock("ugandagrass")
             .withSpawner(PlantSpawner.DOUBLE_GROUND)
             .withBounds(PlantBlock.DOUBLE);
+    public static final DoublePlantBlock FLAMINGO_FLOWER = new DoublePlantBlock("flamingo_flower")
+            .withSpawner(PlantSpawner.DOUBLE_GROUND)
+            .withBounds(PlantBlock.DOUBLE);
+    public static final PlantBlock MELOCACTUS_AZUREUS = new PlantBlock("melocactus_azureus")
+            .withSpawner(PlantSpawner.SINGLE_BEACH)
+            .withBounds(PlantBlock.BUSH);
 
     public static void register() {
         try {

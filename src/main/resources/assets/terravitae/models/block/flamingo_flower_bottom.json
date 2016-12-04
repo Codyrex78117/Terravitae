@@ -1,0 +1,6 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "terravitae:blocks/plants/flamingo_flower_bottom"
+  }
+}

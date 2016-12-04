@@ -3,6 +3,9 @@
 # Blocks
 tile.sand_ryegrass.name=Sand Ryegrass
 tile.garden_angelica.name=Garden Angelica
+tile.ugandagrass.name=Ugandagrass
+tile.flamingo_flower.name=Flamingo Flower
+tile.melocactus_azureus.name=Melocactus Azureus
 
 # Tabs
 itemGroup.terravitae.plants=Terravitae Plants

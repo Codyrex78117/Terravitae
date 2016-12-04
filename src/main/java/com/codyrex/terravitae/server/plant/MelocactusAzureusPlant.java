@@ -4,19 +4,24 @@ import com.codyrex.terravitae.server.block.BlockHandler;
 import com.codyrex.terravitae.server.block.plant.PlantBlock;
 import net.minecraftforge.common.BiomeDictionary;
 
-public class GardenAngelicaPlant implements Plant {
+/**
+ * Created by Codyr on 04/12/2016.
+ */
+public class MelocactusAzureusPlant implements Plant {
+
     @Override
     public PlantBlock getBlock() {
-        return BlockHandler.GARDEN_ANGELICA;
+        return BlockHandler.MELOCACTUS_AZUREUS;
     }
 
     @Override
     public BiomeDictionary.Type[] getSpawnBiomeTypes() {
-        return new BiomeDictionary.Type[] { BiomeDictionary.Type.FOREST, BiomeDictionary.Type.RIVER };
+        return new BiomeDictionary.Type[] { BiomeDictionary.Type.MESA };
     }
 
     @Override
     public double getSpawnChance() {
-        return 10;
+        return 0.2;
     }
 }
+
