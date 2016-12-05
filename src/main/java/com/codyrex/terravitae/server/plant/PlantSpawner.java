@@ -15,8 +15,8 @@ public interface PlantSpawner {
         }
 
         @Override
-        public boolean canSpawn(IBlockState ground, IBlockState state, IBlockState above) {
-            return (ground.getMaterial() == Material.GROUND || ground.getMaterial() == Material.GRASS) && canPlaceAir(state) && canPlaceAir(above);
+        public boolean canSpawn(IBlockState ground, IBlockState state, IBlockState above, PlantBlock block) {
+            return (ground.getMaterial() == Material.GROUND || ground.getMaterial() == Material.GRASS) && canPlaceAir(state, block) && canPlaceAir(above, block);
         }
     };
     PlantSpawner DOUBLE_GROUND = new PlantSpawner() {
@@ -28,8 +28,8 @@ public interface PlantSpawner {
         }
 
         @Override
-        public boolean canSpawn(IBlockState ground, IBlockState state, IBlockState above) {
-            return (ground.getMaterial() == Material.GROUND || ground.getMaterial() == Material.GRASS) && canPlaceAir(state) && canPlaceAir(above);
+        public boolean canSpawn(IBlockState ground, IBlockState state, IBlockState above, PlantBlock block) {
+            return (ground.getMaterial() == Material.GROUND || ground.getMaterial() == Material.GRASS) && canPlaceAir(state, block) && canPlaceAir(above, block);
         }
     };
     PlantSpawner SINGLE_BEACH = new PlantSpawner() {
@@ -39,8 +39,8 @@ public interface PlantSpawner {
         }
 
         @Override
-        public boolean canSpawn(IBlockState ground, IBlockState state, IBlockState above) {
-            return ground.getMaterial() == Material.SAND && canPlaceAir(state) && canPlaceAir(above);
+        public boolean canSpawn(IBlockState ground, IBlockState state, IBlockState above, PlantBlock block) {
+            return ground.getMaterial() == Material.SAND && canPlaceAir(state, block) && canPlaceAir(above, block);
         }
     };
 
@@ -57,17 +57,19 @@ public interface PlantSpawner {
      * @param ground the blockstate below the plant
      * @param state the blockstate where the plant will be placed
      * @param above the blockstate above the plant
+     * @param block the plant being placed
      * @return if the plant can spawn
      */
-    boolean canSpawn(IBlockState ground, IBlockState state,  IBlockState above);
+    boolean canSpawn(IBlockState ground, IBlockState state, IBlockState above, PlantBlock block);
 
     /**
      * Checks if the given block is replaceable, but not liquid. Used for land plants to make sure it doesn't spawn in liquid or inside another block
      * @param state the state to check
+     * @param block the block being placed
      * @return if the given blockstate can be replaced
      */
-    static boolean canPlaceAir(IBlockState state) {
+    static boolean canPlaceAir(IBlockState state, PlantBlock block) {
         Material material = state.getMaterial();
-        return material.isReplaceable() && !material.isLiquid();
+        return (material.isReplaceable() && !material.isLiquid()) || state.getBlock() == block;
     }
 }

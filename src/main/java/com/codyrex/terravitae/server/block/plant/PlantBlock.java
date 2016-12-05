@@ -128,7 +128,7 @@ public class PlantBlock<T extends PlantBlock> extends BlockBush implements Defau
     }
 
     protected boolean canPlace(IBlockState down, IBlockState here, IBlockState up) {
-        return this.spawner.canSpawn(down, here, up);
+        return this.spawner.canSpawn(down, here, up, this);
     }
 
     @Override
