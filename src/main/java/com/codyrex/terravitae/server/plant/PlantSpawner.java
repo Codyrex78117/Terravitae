@@ -32,6 +32,20 @@ public interface PlantSpawner {
             return (ground.getMaterial() == Material.GROUND || ground.getMaterial() == Material.GRASS) && canPlaceAir(state, block) && canPlaceAir(above, block);
         }
     };
+    PlantSpawner DOUBLE_RIVER = new PlantSpawner() {
+        @Override
+        public void spawn(World world, BlockPos pos, PlantBlock block) {
+            IBlockState state = block.getDefaultState();
+            world.setBlockState(pos, state.withProperty(DoublePlantBlock.HALF, DoublePlantBlock.BlockHalf.LOWER), 2);
+            world.setBlockState(pos.up(), state.withProperty(DoublePlantBlock.HALF, DoublePlantBlock.BlockHalf.UPPER), 2);
+        }
+
+        @Override
+        public boolean canSpawn(IBlockState ground, IBlockState state, IBlockState above, PlantBlock block) {
+            return (ground.getMaterial() == Material.GROUND || ground.getMaterial() == Material.GRASS || ground.getMaterial() == Material.CLAY ||ground.getMaterial() == Material.SAND) && canPlaceAir(state, block) && canPlaceAir(above, block);
+        }
+    };
+
     PlantSpawner SINGLE_BEACH = new PlantSpawner() {
         @Override
         public void spawn(World world, BlockPos pos, PlantBlock block) {

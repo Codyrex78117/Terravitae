@@ -5,23 +5,22 @@ import com.codyrex.terravitae.server.block.plant.PlantBlock;
 import net.minecraftforge.common.BiomeDictionary;
 
 /**
- * Created by Codyr on 04/12/2016.
+ * Created by Codyr on 02/02/2017.
  */
-public class MelocactusAzureusPlant implements Plant {
-
+public class CommonBulrushPlant implements Plant {
     @Override
     public PlantBlock getBlock() {
-        return BlockHandler.MELOCACTUS_AZUREUS;
+        return BlockHandler.COMMON_BULRUSH;
     }
 
     @Override
     public BiomeDictionary.Type[] getSpawnBiomeTypes() {
-        return new BiomeDictionary.Type[] { BiomeDictionary.Type.MESA };
+        return new BiomeDictionary.Type[] { BiomeDictionary.Type.RIVER, BiomeDictionary.Type.SWAMP };
     }
 
     @Override
     public double getSpawnChance() {
-        return 0.6;
+        return 20;
     }
 }
 

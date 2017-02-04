@@ -18,6 +18,7 @@ public class PlantHandler {
     public static final UgandagrassPlant UGANDAGRASS = new UgandagrassPlant();
     public static final FlamingoFlowerPlant FLAMINGO_FLOWER = new FlamingoFlowerPlant();
     public static final MelocactusAzureusPlant MELOCACTUS_AZUREUS = new MelocactusAzureusPlant();
+    public static final CommonBulrushPlant COMMON_BULRUSH_PLANT = new CommonBulrushPlant();
 
     /**
      * Registers all plants that are a static field on this class.

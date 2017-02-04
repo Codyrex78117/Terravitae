@@ -1,0 +1,6 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "terravitae:blocks/plants/common_bulrush_top"
+  }
+}

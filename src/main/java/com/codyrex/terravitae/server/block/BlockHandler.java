@@ -32,6 +32,9 @@ public class BlockHandler {
     public static final PlantBlock MELOCACTUS_AZUREUS = new PlantBlock("melocactus_azureus")
             .withSpawner(PlantSpawner.SINGLE_BEACH)
             .withBounds(PlantBlock.BUSH);
+    public static final DoublePlantBlock COMMON_BULRUSH = new DoublePlantBlock("common_bulrush")
+            .withSpawner(PlantSpawner.DOUBLE_RIVER)
+            .withBounds(PlantBlock.DOUBLE);
 
     public static void register() {
         try {

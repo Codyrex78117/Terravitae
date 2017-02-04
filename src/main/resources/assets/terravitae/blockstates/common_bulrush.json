@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "half=lower": {
+      "model": "terravitae:common_bulrush_bottom"
+    },
+    "half=upper": {
+      "model": "terravitae:common_bulrush_top"
+    }
+  }
+}
