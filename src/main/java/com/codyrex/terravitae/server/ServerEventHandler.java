@@ -34,7 +34,7 @@ public class ServerEventHandler {
                         IBlockState ground = world.getBlockState(surface.down());
                         IBlockState state = world.getBlockState(surface);
                         IBlockState above = world.getBlockState(surface.up());
-                        if (spawner.canSpawn(ground, state, above, plant.getBlock())) {
+                        if (spawner.canSpawn(world, surface, ground, state, above, plant.getBlock(), true)) {
                             spawner.spawn(world, surface, plant.getBlock());
                         }
                     }

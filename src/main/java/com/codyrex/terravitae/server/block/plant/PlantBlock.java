@@ -114,7 +114,7 @@ public class PlantBlock<T extends PlantBlock> extends BlockBush implements Defau
         IBlockState up = world.getBlockState(pos.up());
 
         for (int i = 0; i < 8; ++i) {
-            if (this.canPlace(down, here, up)) {
+            if (this.canPlace(world, pos, down, here, up)) {
                 return pos.down();
             }
 
@@ -127,13 +127,13 @@ public class PlantBlock<T extends PlantBlock> extends BlockBush implements Defau
         return null;
     }
 
-    protected boolean canPlace(IBlockState down, IBlockState here, IBlockState up) {
-        return this.spawner.canSpawn(down, here, up, this);
+    protected boolean canPlace(World world, BlockPos pos, IBlockState down, IBlockState here, IBlockState up) {
+        return this.spawner.canSpawn(world, pos, down, here, up, this, false);
     }
 
     @Override
     public boolean canBlockStay(World world, BlockPos pos, IBlockState state) {
-        return this.canPlace(world.getBlockState(pos.down()), state, world.getBlockState(pos.up()));
+        return this.canPlace(world, pos, world.getBlockState(pos.down()), state, world.getBlockState(pos.up()));
     }
 
     @Override

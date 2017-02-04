@@ -20,7 +20,7 @@ public class CommonBulrushPlant implements Plant {
 
     @Override
     public double getSpawnChance() {
-        return 20;
+        return 80;
     }
 }
 
