@@ -19,6 +19,11 @@ public class PlantHandler {
     public static final FlamingoFlowerPlant FLAMINGO_FLOWER = new FlamingoFlowerPlant();
     public static final MelocactusAzureusPlant MELOCACTUS_AZUREUS = new MelocactusAzureusPlant();
     public static final CommonBulrushPlant COMMON_BULRUSH_PLANT = new CommonBulrushPlant();
+    public static final GigeriaLuminosaPlant GIGERIA_LUMINOSA_PLANT = new GigeriaLuminosaPlant();
+    public static final FieldForgetMeNotPlant FIELD_FORGET_ME_NOT_PLANT = new FieldForgetMeNotPlant();
+    public static final GoldLaceCactusPlant GOLD_LACE_CACTUS_PLANT = new GoldLaceCactusPlant();
+    public static final AriocarpusKotschoubeyanusPlant ARIOCARPUS_KOTSCHOUBEYANUS = new AriocarpusKotschoubeyanusPlant();
+    public static final NervePlantPlant NERVE_PLANT_PLANT= new NervePlantPlant();
 
     /**
      * Registers all plants that are a static field on this class.

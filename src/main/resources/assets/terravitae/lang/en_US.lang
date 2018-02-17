@@ -7,6 +7,10 @@ tile.ugandagrass.name=Ugandagrass
 tile.flamingo_flower.name=Flamingo Flower
 tile.melocactus_azureus.name=Melocactus Azureus
 tile.common_bulrush.name=Common Bulrush
+tile.gigeria_luminosa.name=Gigeria Luminosa
+tile.field_forget_me_not.name=Field Forget-Me-Not
+tile.gold_lace_cactus.name=Gold Lace Cactus
+tile.ariocarpus_kotschoubeyanus.name=Ariocarpus kotschoubeyanus
 
 # Tabs
 itemGroup.terravitae.plants=Terravitae Plants

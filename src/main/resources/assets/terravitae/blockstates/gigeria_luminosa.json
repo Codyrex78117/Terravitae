@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "half=lower": {
+      "model": "terravitae:gigeria_luminosa_bottom"
+    },
+    "half=upper": {
+      "model": "terravitae:gigeria_luminosa_top"
+    }
+  }
+}

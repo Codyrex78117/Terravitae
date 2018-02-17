@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "terravitae:blocks/plants/gigeria_luminosa_top"
+  }
+}

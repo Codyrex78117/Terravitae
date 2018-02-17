@@ -60,6 +60,20 @@ public interface PlantSpawner {
             return ground.getMaterial() == Material.SAND && canPlaceAir(state, block) && canPlaceAir(above, block);
         }
     };
+    PlantSpawner DOUBLE_END = new PlantSpawner() {
+        @Override
+        public void spawn(World world, BlockPos pos, PlantBlock block) {
+            IBlockState state = block.getDefaultState();
+            world.setBlockState(pos, state.withProperty(DoublePlantBlock.HALF, DoublePlantBlock.BlockHalf.LOWER), 2);
+            world.setBlockState(pos.up(), state.withProperty(DoublePlantBlock.HALF, DoublePlantBlock.BlockHalf.UPPER), 2);
+        }
+
+        @Override
+        public boolean canSpawn(World world, BlockPos pos, IBlockState ground, IBlockState state, IBlockState above, PlantBlock block, boolean generation) {
+            return (ground.getMaterial() == Material.GROUND || state.getBlock() == Blocks.END_STONE && canPlaceAir(state, block) && canPlaceAir(above, block));
+
+        }
+    };
 
     /**
      * Places the actual plant in the world

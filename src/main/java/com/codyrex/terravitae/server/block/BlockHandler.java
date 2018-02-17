@@ -35,6 +35,19 @@ public class BlockHandler {
     public static final DoublePlantBlock COMMON_BULRUSH = new DoublePlantBlock("common_bulrush")
             .withSpawner(PlantSpawner.DOUBLE_RIVER)
             .withBounds(PlantBlock.DOUBLE);
+    public static final DoublePlantBlock GIGERIA_LUMINOSA = new DoublePlantBlock("gigeria_luminosa")
+            .withSpawner(PlantSpawner.DOUBLE_END)
+            .withBounds(PlantBlock.DOUBLE);
+    public static final PlantBlock FIELD_FORGET_ME_NOT = new PlantBlock("field_forget_me_not")
+            .withSpawner(PlantSpawner.SINGLE_GROUND);
+    public static final PlantBlock GOLD_LACE_CACTUS = new PlantBlock("gold_lace_cactus")
+            .withSpawner(PlantSpawner.SINGLE_BEACH)
+            .withBounds(PlantBlock.BUSH);
+    public static final PlantBlock ARIOCARPUS_KOTSCHOUBEYANUS = new PlantBlock("ariocarpus_kotschoubeyanus")
+            .withSpawner(PlantSpawner.SINGLE_BEACH)
+            .withBounds(PlantBlock.BUSH);
+    public static final PlantBlock NERVE_PLANT = new PlantBlock("nerve_plant")
+            .withSpawner(PlantSpawner.SINGLE_GROUND);
 
     public static void register() {
         try {

@@ -1,0 +1,6 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "terravitae:blocks/plants/gold_lace_cactus"
+  }
+}
