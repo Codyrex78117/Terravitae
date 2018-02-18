@@ -11,6 +11,9 @@ tile.gigeria_luminosa.name=Gigeria Luminosa
 tile.field_forget_me_not.name=Field Forget-Me-Not
 tile.gold_lace_cactus.name=Gold Lace Cactus
 tile.ariocarpus_kotschoubeyanus.name=Ariocarpus kotschoubeyanus
+tile.nerve_plant.name=Nerve Plant
+tile.texas_bluebonnet.name=Texas Bluebonnet
+tile.western_sword-fern.name=Western sword-fern
 
 # Tabs
 itemGroup.terravitae.plants=Terravitae Plants

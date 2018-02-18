@@ -48,6 +48,11 @@ public class BlockHandler {
             .withBounds(PlantBlock.BUSH);
     public static final PlantBlock NERVE_PLANT = new PlantBlock("nerve_plant")
             .withSpawner(PlantSpawner.SINGLE_GROUND);
+    public static final PlantBlock TEXAS_BLUEBONNET = new PlantBlock("texas_bluebonnet")
+            .withSpawner(PlantSpawner.SINGLE_RIVER);
+    public static final PlantBlock WESTERN_SWORD_FERN = new PlantBlock("western_sword-fern")
+            .withSpawner(PlantSpawner.SINGLE_GROUND);
+
 
     public static void register() {
         try {

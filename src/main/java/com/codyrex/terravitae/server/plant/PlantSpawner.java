@@ -74,6 +74,17 @@ public interface PlantSpawner {
 
         }
     };
+    PlantSpawner SINGLE_RIVER = new PlantSpawner() {
+        @Override
+        public void spawn(World world, BlockPos pos, PlantBlock block) {
+            world.setBlockState(pos, block.getDefaultState(), 2);
+        }
+        @Override
+        public boolean canSpawn(World world, BlockPos pos, IBlockState ground, IBlockState state, IBlockState above, PlantBlock block, boolean generation) {
+            boolean canPlace = (ground.getMaterial() == Material.GROUND || ground.getMaterial() == Material.GRASS || ground.getMaterial() == Material.CLAY || ground.getMaterial() == Material.SAND) && canPlaceAir(state, block) && canPlaceAir(above, block);
+            return canPlace && (!generation || PlantSpawner.isNearWater(world, pos, 5, 3));
+        }
+    };
 
     /**
      * Places the actual plant in the world

@@ -23,7 +23,10 @@ public class PlantHandler {
     public static final FieldForgetMeNotPlant FIELD_FORGET_ME_NOT_PLANT = new FieldForgetMeNotPlant();
     public static final GoldLaceCactusPlant GOLD_LACE_CACTUS_PLANT = new GoldLaceCactusPlant();
     public static final AriocarpusKotschoubeyanusPlant ARIOCARPUS_KOTSCHOUBEYANUS = new AriocarpusKotschoubeyanusPlant();
-    public static final NervePlantPlant NERVE_PLANT_PLANT= new NervePlantPlant();
+    public static final NervePlantPlant NERVE_PLANT_PLANT = new NervePlantPlant();
+    public static final TexasBluebonnetPlant TEXAS_BLUEBONNET_PLANT = new TexasBluebonnetPlant();
+    public static final WesternSwordFernPlant WESTERN_SWORD_FERN_PLANT = new WesternSwordFernPlant();
+
 
     /**
      * Registers all plants that are a static field on this class.
